@@ -1,1 +1,10 @@
 /* css for the app  */
+i {
+  font-size: 200px;
+  color: #924da3;
+  text-align: center;
+}
+
+.top{
+  background-color: #879baf;
+}

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import axios from 'axios'; 
+import axios from 'axios';
 import CurrentWeather from './components/current';
+// to make props work you must set the name of the state to the current state
+// check below in current weather for an example.
 
-
-const Key = "3b84024871aef976d646f09db58974da"; 
+const Key = "3b84024871aef976d646f09db58974da";
 class App extends Component {
   constructor(props){
     super(props);
@@ -15,7 +16,7 @@ class App extends Component {
     }
 
   }
-  componentWillMount(){
+  componentDidMount(){
     this.weatherReport();
   }
   weatherReport(lat,lon){
@@ -32,14 +33,14 @@ class App extends Component {
         console.log(err);
       });
      })
-     
-   } 
-   
+
+   }
+
   }
   render(){
     return(
       <div>
-        <CurrentWeather />
+        <CurrentWeather currently={this.state.currently}/>
       </div>
     );
   }
