@@ -16,14 +16,12 @@ html{
   font-size: 6rem;
   color: #fff;
   margin-bottom: 0;
-  margin-top:25%;
-  margin-left:-15px;
 }
 
 .main-top{
   line-height: 1.5rem;
   width:100%;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .top{
@@ -42,14 +40,10 @@ html{
 
 .card-weekly{
   display:flex;
-  width: 100%;
   text-align: center;
   flex-direction: column;
-  word-wrap: break-word;
   border: 2px solid #2f4f4f;
   border-radius: 0.25rem;
-  min-height:100%;
-  background:transparent;
 }
 
 .adj{
@@ -59,10 +53,11 @@ html{
 
 .bttn{
   border:1px solid #eb6864;
-  padding: 5px 35px;
+  padding: 10px 35px;
   width: 50%;
   margin: 0 auto;
   text-decoration: none;
+  color: #eb6864
 }
 
 .bttn:hover{
@@ -89,6 +84,7 @@ html{
   text-align: center;
   font-size:3rem;
   text-decoration: none;
+  color: #eb6864
 }
 
 .return:hover{
@@ -110,28 +106,61 @@ html{
 .move{
   margin-right: 30%;
 }
+
+.card{
+  background: transparent !important ;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.card.card-weekly{
+  width:300px;
+}
+
+.card-logic.card-header{
+  box-shadow: no ne;
+}
+.card.card-weekly .card-header{
+  box-shadow: none;
+}
+
+.card-weekly .card-footer{
+  border-top: none;
+}
+.card .card-footer{
+  border-top: none;
+}
+.card-weekly .card-footer-item:not(:last-child){
+  border-right:none;
+}
 .card-magic{
   width:100% !important;
   border: solid 2px #2f4f4f;
   text-align: center;
   margin-top: 9%;
+  /* background: transparent !important; */
 }
 
 .card-logic{
-    width:100%;
+    /* width:100%; */
     border: solid 2px #2f4f4f;
-    background: transparent;
+    /* background: transparent; */
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    word-wrap: break-word;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* word-wrap: break-word; */
 }
 
-.day{
+/* .day{
   margin-bottom:10%;
   text-align: left;
-}
+} */
 
+@media only screen and (min-width: 320px){
+  .card.card-logic{
+    width: 98%;
+  }
+}
 @media only screen and (max-width: 771px){
   .top{
     width:100%;

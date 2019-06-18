@@ -48,13 +48,27 @@ class Days extends Component {
               
                 <div key={day.time} className="top">
                 <div className="card card-weekly">
-                   
-                    <h1 className="day">{moment.unix(day.time).format('ddd')}</h1>
+                <header className="card-header">
+                <h1 className="day card-header-title">{moment.unix(day.time).format('ddd')}</h1>
+                </header>
+                <div className="card-content">
+                  <div className="content">
+                  <i className={`mini-top wi wi-forecast-io-${day.icon}`}></i>
+                  </div>
+                  <div className="content">
+                  <p className="sum">{day.summary}</p> 
+                  </div>
+                </div>
+                <footer className="card-footer">
+                   <p className="desc card-footer-item">High: {Math.round(day.temperatureHigh)}&#xb0;</p>
+                   <p className="desc card-footer-item">Low: {Math.round(day.temperatureLow)}&#xb0;</p>
+                </footer>
+                    {/* <h1 className="day">{moment.unix(day.time).format('ddd')}</h1>
                     <i className={`mini-top wi wi-forecast-io-${day.icon}`}></i>
                        <p className="sum">{day.summary}</p> 
                    
                         <p className="desc">High: {Math.round(day.temperatureHigh)}&#xb0;</p>
-                        <p className="desc">Low: {Math.round(day.temperatureLow)}&#xb0;</p>
+                        <p className="desc">Low: {Math.round(day.temperatureLow)}&#xb0;</p> */}
                         
                     </div>
                  </div>
