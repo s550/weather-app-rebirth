@@ -118,10 +118,14 @@ html{
 }
 
 .card-logic.card-header{
-  box-shadow: no ne;
+  box-shadow: none;
 }
 .card.card-weekly .card-header{
-  box-shadow: none;
+  box-shadow: none !important;
+}
+
+.card-header{
+  box-shadow: none !important;
 }
 
 .card-weekly .card-footer{
@@ -156,11 +160,33 @@ html{
   text-align: left;
 } */
 
-@media only screen and (min-width: 320px){
+@media only screen and (min-width: 320px) and (max-width: 559px){
   .card.card-logic{
     width: 98%;
+    margin-left: 6px;
+  }
+
+  .bttn{
+    padding: 5px 17px;
+  }
+
+  .return{
+    font-size: 2rem;
   }
 }
+
+@media only screen and (min-width: 560px) and (max-width:770px){
+  .card.card-logic{
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 771px){
+  .card.card-logic{
+    width: 50%;
+  }
+}
+
 @media only screen and (max-width: 771px){
   .top{
     width:100%;
@@ -183,5 +209,8 @@ html{
 @media only screen and (min-width: 992px){
   .top{
     width: 25%;
+  }
+  .card.card-logic{
+    width:50%;
   }
 }
